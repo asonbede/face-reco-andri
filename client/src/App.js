@@ -62,7 +62,7 @@ function App() {
     console.log("click");
     console.log("click2", { imageUrl });
 
-    fetch(`/imageaddress`, {
+    fetch(`https://face-reco-andri.herokuapp.com/imageaddress`, {
       method: "post",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ address: imageUrl }),
@@ -70,7 +70,7 @@ function App() {
       .then((response) => response.json())
       .then((data) => {
         calculateFaceLocation(data);
-        fetch("/image", {
+        fetch("https://face-reco-andri.herokuapp.com/image", {
           method: "put",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ id: newUser.id }),
