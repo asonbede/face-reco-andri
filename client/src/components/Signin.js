@@ -11,7 +11,7 @@ const Signin = ({ onRouteChange, loadUser }) => {
   };
 
   const onSubmitSignIn = () => {
-    fetch("http://localhost:3001/signin", {
+    fetch("https://face-reco-andri.herokuapp.com/signin", {
       method: "post",
       headers: { "Content-type": "application/json" },
       body: JSON.stringify({

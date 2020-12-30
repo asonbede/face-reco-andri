@@ -1,5 +1,3 @@
-//import logo from './logo.svg';
-//import Particles from "react-particles-js";
 import React, { useState } from "react";
 import Navigation from "./components/Navigation";
 import "./App.css";
@@ -7,7 +5,7 @@ import Logo from "./components/Logo";
 import ImageLinkForm from "./components/ImageLinkForm";
 import Rank from "./components/Rank";
 import Particles from "react-particles-js";
-//import Clarifai fro;
+
 import FaceRecognition from "./components/faceRecognition";
 import Register from "./components/Register";
 import Signin from "./components/Signin";
@@ -22,9 +20,7 @@ const particlesOptions = {
     },
   },
 };
-// const app = new Clarifai.App({
-//   apiKey: "96a8e655db0741248b50a1c722aaec3c",
-// });
+
 const initialAddres =
   "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Bill_Clinton.jpg/220px-Bill_Clinton.jpg";
 function App() {
@@ -66,7 +62,7 @@ function App() {
     console.log("click");
     console.log("click2", { imageUrl });
 
-    fetch(`http://localhost:3001/imageaddress`, {
+    fetch(`https://face-reco-andri.herokuapp.com/imageaddress`, {
       method: "post",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ address: imageUrl }),
@@ -74,7 +70,7 @@ function App() {
       .then((response) => response.json())
       .then((data) => {
         calculateFaceLocation(data);
-        fetch("http://localhost:3001/image", {
+        fetch("https://face-reco-andri.herokuapp.com/image", {
           method: "put",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ id: newUser.id }),
