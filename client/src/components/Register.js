@@ -18,7 +18,7 @@ const Register = ({ onRouteChange, loadUser }) => {
     console.log("from register1");
     console.log({ nameValue, emailValue, passwordValue });
 
-    fetch("https://face-reco-andri.herokuapp.com/register", {
+    fetch("https://recognition-app23.herokuapp.com/register", {
       method: "post",
       headers: { "Content-type": "application/json" },
       body: JSON.stringify({
