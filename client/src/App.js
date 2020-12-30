@@ -7,7 +7,7 @@ import Logo from "./components/Logo";
 import ImageLinkForm from "./components/ImageLinkForm";
 import Rank from "./components/Rank";
 import Particles from "react-particles-js";
-//import Clarifai from "clarifai";
+//import Clarifai fro;
 import FaceRecognition from "./components/faceRecognition";
 import Register from "./components/Register";
 import Signin from "./components/Signin";
