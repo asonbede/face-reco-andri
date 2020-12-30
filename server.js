@@ -42,7 +42,7 @@ app.post("/signin", (req, res) => {
   signin.handleSignin(req, res, db, bcrypt);
 });
 
-app.post("/register", (req, res) =>
+app.post("https://face-reco-andri.herokuapp.com/register", (req, res) =>
   register.handleRegister(req, res, db, bcrypt)
 );
 
