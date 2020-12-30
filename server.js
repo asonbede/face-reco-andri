@@ -26,6 +26,15 @@ const db = knex({
   },
 });
 
+// const db = knex({
+//   client: "pg",
+//   connection: {
+//     host: "127.0.0.1",
+//     user: "postgres",
+//     password: "12345",
+//     database: "smartbraindb",
+//   },
+// });
 app.post("/imageaddress", (req, res) => {
   console.log(req.params);
   console.log("fromImageAddrsssss");
@@ -42,9 +51,10 @@ app.post("/signin", (req, res) => {
   signin.handleSignin(req, res, db, bcrypt);
 });
 
-app.post("https://face-reco-andri.herokuapp.com/register", (req, res) =>
-  register.handleRegister(req, res, db, bcrypt)
-);
+app.post("/register", (req, res) => {
+  console.log("from register-server2");
+  register.handleRegister(req, res, db, bcrypt);
+});
 
 app.put("/image", (req, res) => {
   imageCount.handleImageCount(req, res, db);
