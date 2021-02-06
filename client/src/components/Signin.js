@@ -11,7 +11,7 @@ const Signin = ({ onRouteChange, loadUser }) => {
   };
 
   const onSubmitSignIn = () => {
-    fetch("https://recognition-app23.herokuapp.com/signin", {
+    fetch("http://localhost:3001/signin", {
       method: "post",
       headers: { "Content-type": "application/json" },
       body: JSON.stringify({
@@ -23,7 +23,7 @@ const Signin = ({ onRouteChange, loadUser }) => {
       .then((data) => {
         console.log({ data });
 
-        if (data.id) {
+        if (data._id) {
           loadUser(data);
           onRouteChange("home");
         } else {

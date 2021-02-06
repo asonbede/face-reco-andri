@@ -5,4 +5,28 @@
   flex-wrap: wrap;
   justify-content: center;
   cursor: pointer;
+  color: red;
+  /* border: 2px solid blue; */
+}
+.relative {
+  position: relative;
+  width: 50%;
+  height: auto;
+  margin: 3px auto;
+}
+
+.no-bounding-box {
+  position: static;
+  margin: 0 auto;
+
+  transform: translate(0, -90px);
+  z-index: 1;
+}
+.image-table {
+  position: static;
+  margin: 0 auto;
+}
+.faceFeatureTable {
+   width: 100%; 
+  margin: 0 auto;
 }

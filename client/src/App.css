@@ -14,3 +14,7 @@
   left: 0;
   z-index: -1;
 }
+video {
+  margin: 0 auto;
+  display: none;
+}

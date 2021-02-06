@@ -18,7 +18,7 @@ const Register = ({ onRouteChange, loadUser }) => {
     console.log("from register1");
     console.log({ nameValue, emailValue, passwordValue });
 
-    fetch("https://recognition-app23.herokuapp.com/register", {
+    fetch("http://localhost:3001/register", {
       method: "post",
       headers: { "Content-type": "application/json" },
       body: JSON.stringify({
@@ -29,8 +29,8 @@ const Register = ({ onRouteChange, loadUser }) => {
     })
       .then((response) => response.json())
       .then((user) => {
-        if (user.id) {
-          console.log(user);
+        if (user._id) {
+          console.log({ user });
           loadUser(user);
           onRouteChange("home");
         }
