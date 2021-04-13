@@ -18,6 +18,7 @@ const imageCount = require("./controllers/imageCount");
 const path = require("path");
 var AWS = require("aws-sdk");
 const { request } = require("http");
+process.env.GOOGLE_APPLICATION_CREDENTIALS = 'C:/Users/hp/Downloads/vision-project-302500-b67aa319a0aa.json'
 
 const configAws = new AWS.Config({
   accessKeyId: process.env.AWS_ACCESS_KEY_ID,
