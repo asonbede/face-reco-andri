@@ -322,7 +322,7 @@ const [textTableOn, settextTableOn] = useState(null)
       console.log("click3", { imageUrl });
       console.log("obj-pho", { base64EncodedStr });
 
-      //const video = videoRef.current;
+      //const video = videoRef.current;,,,,,.
       if (window.navigator.mediaDevices.getUserMedia) {
         window.navigator.mediaDevices
           .getUserMedia({ video: true })
