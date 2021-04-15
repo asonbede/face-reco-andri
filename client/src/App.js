@@ -38,10 +38,9 @@ function App() {
   const [webCamCaptureButton, setwebCamCaptureButton] = useState(false);
   const [featureTableOn, setfeatureTableOn] = useState(null);
   const [featureTableObj, setfeatureTableObj] = useState({});
-const [textValue, settextValue] = useState("")
-const [textTableOn, settextTableOn] = useState(null)
+  const [textValue, settextValue] = useState("");
+  const [textTableOn, settextTableOn] = useState(null);
 
-  
   const canvasRef = useRef(null);
   const videoRef = useRef(null);
   function onLoadImageHandler(event) {
@@ -80,7 +79,6 @@ const [textTableOn, settextTableOn] = useState(null)
       video.style.display = "none";
       canvas.style.display = "none";
     }
-    
   }
 
   const handleChangeImage = (event) => {
@@ -217,10 +215,10 @@ const [textTableOn, settextTableOn] = useState(null)
         // })
       });
       setBox(lalelArrOfObj);
-    }else if (selectEleValue === "text-in-image") {
-        settextValue(data.text) 
-        settextTableOn(true)
-    } 
+    } else if (selectEleValue === "text-in-image") {
+      settextValue(data.text);
+      settextTableOn(true);
+    }
   };
 
   const onInputChange = (event) => {
@@ -292,8 +290,8 @@ const [textTableOn, settextTableOn] = useState(null)
       setImageUrl("");
       setshowImageTable(false);
       setwebCamCaptureButton(false);
-      settextTableOn(null)
-      settextValue("")
+      settextTableOn(null);
+      settextValue("");
       videoOff();
       const video = videoRef.current;
       const canvas = canvasRef.current;
@@ -312,7 +310,8 @@ const [textTableOn, settextTableOn] = useState(null)
       analyseImage("photo-objects");
     } else if (
       selectEleValue === "webcam-objects" ||
-      selectEleValue === "webcam-faces"||selectEleValue=== "text-in-webcam"
+      selectEleValue === "webcam-faces" ||
+      selectEleValue === "text-in-webcam"
     ) {
       const video = videoRef.current;
       const canvas = canvasRef.current;
@@ -322,7 +321,7 @@ const [textTableOn, settextTableOn] = useState(null)
       console.log("click3", { imageUrl });
       console.log("obj-pho", { base64EncodedStr });
 
-      //const video = videoRef.current;,,,,,.
+      //const video = videoRef.current;,,,,,.bedebedebdefff
       if (window.navigator.mediaDevices.getUserMedia) {
         window.navigator.mediaDevices
           .getUserMedia({ video: true })
@@ -335,12 +334,12 @@ const [textTableOn, settextTableOn] = useState(null)
       }
 
       // analyseImage("webcam-objects");
-    }else if (selectEleValue === "text-in-image") {
+    } else if (selectEleValue === "text-in-image") {
       console.log("click3", { imageUrl });
       console.log("obj-pho", { base64EncodedStr });
 
       analyseImage("text-in-image");
-    } 
+    }
   };
 
   function handleWebCamButtonClick(params) {
@@ -390,7 +389,6 @@ const [textTableOn, settextTableOn] = useState(null)
       <Navigation onRouteChange={onRouteChange} isSignedIn={isSignedIn} />
       {signin === "home" ? (
         <div>
-         
           <Logo />
 
           <Rank name={newUser.name} entries={newUser.entries} />
