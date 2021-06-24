@@ -321,7 +321,7 @@ function App() {
       console.log("click3", { imageUrl });
       console.log("obj-pho", { base64EncodedStr });
 
-      //const video = videoRef.current;,,,,,.bedebedebdefff
+      //const video = videoRef.current;,,,,,.bedebedebdefffkkkkkk
       if (window.navigator.mediaDevices.getUserMedia) {
         window.navigator.mediaDevices
           .getUserMedia({ video: true })
